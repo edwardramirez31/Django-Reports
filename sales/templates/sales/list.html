@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+SAles
+{% endblock title %}
+
+{% block content %}
+Sales List
+<ul>
+{% for sale in sales_list %}
+<li>
+<a href="{% url 'sales:sale_detail' sale.id %}">{{ sale.transaction_id }}</a>
+</li>
+{% endfor %}
+</ul>
+{% endblock content %}`
