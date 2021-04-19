@@ -22,6 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
+# en development se piden los archivos al local host
 if settings.DEBUG:
+    # document root es la carpeta que contiene los arhivos estaticos a los que se quiere tener acceso a traves del primer argumento, que es la web path
     urlpatterns += static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

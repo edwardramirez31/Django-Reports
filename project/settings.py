@@ -126,10 +126,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
+# lista de rutas que se quieren incluir para que Django reconozca estas carpetas como lugares donde puede encontrar archivos estaticos
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+# Carpeta raiz de todos los archivos estaticos una vez todo se haya colocado en una carpeta
+# STATIC_ROOT = 'static_root'
 
 MEDIA_URL = '/media/'
 
